@@ -1,0 +1,45 @@
+.login-form {
+  text-align: center;
+  width: 80%;
+  margin: 110px auto 0;
+}
+
+input[type=email], input[type=password] {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  outline: none;
+  /*padding-top: 24px;
+  padding-bottom: 24px;*/
+}
+
+.login-button {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.forgot-password {
+  display: block;
+  margin: 8px auto 0 auto;
+  font-size: 14px;
+}
+
+
+.footer_login {
+    background-color: #62318a;
+    border-top: 1px solid #ddd;
+    bottom: 0;
+    display: table;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    height: 49px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    table-layout: fixed;
+    white-space: nowrap;
+    width: 100%;
+}

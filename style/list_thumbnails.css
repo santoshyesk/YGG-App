@@ -1,0 +1,79 @@
+body{
+	 font-family: Verdana, Geneva, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 17px;
+}
+.list-item-container {
+  line-height: 1;
+  padding: 15px 0px 15px 15px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.name {
+  font-weight:700;
+  font-size: 16px;
+  line-height: 16px;  
+  margin-bottom: 6px;
+  font-family:Tahoma, Geneva, sans-serif;
+  color:#5C2A86;
+}
+
+.desc {
+  line-height: 1.2;
+  font-size: 13px;
+  margin-bottom: 6px;
+  font-family:Tahoma, Geneva, sans-serif;
+  color:#5C2A86;
+}
+
+.price {
+  line-height: 1.2;
+  font-size: 13px;
+  margin-bottom: 6px;
+  font-weight:bold;
+  font-family:Tahoma, Geneva, sans-serif;
+  color:#5C2A86;
+}
+
+ons-toolbar + .page__background + .page__content {
+    top: 65px;
+}
+
+.plan-name {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.footer_product {
+	padding-top:15px;
+    background-color: #22A5B9;
+    border-top: 1px solid #ddd;
+    bottom: 0;
+    display: table;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    height: 49px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    table-layout: fixed;
+    white-space: nowrap;
+    width: 100%;
+}
+.center{
+	text-align:center;
+	font-size:12px;
+	font-weight:600;
+	color:#FFF;
+}
