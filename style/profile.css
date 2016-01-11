@@ -58,7 +58,7 @@
     border-top: 1px solid #ddd;
     bottom: 0;
     display: table;
-    font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-family: 'Raleway';
     font-size: 17px;
     font-weight: 400;
     height: 49px;
@@ -80,7 +80,7 @@
 
 .thankyou{
 	padding-top:40px;
-	font-family:Tahoma, Geneva, sans-serif;
+	font-family: 'Raleway';
 	font-size:25px;
 	font-weight:bold;
 	color:#68398E;

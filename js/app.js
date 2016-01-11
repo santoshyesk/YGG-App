@@ -100,7 +100,68 @@ var app = {
             Data.selectedItem = selectedItem;
             $scope.ons.navigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
         }
+		
+		logincheck = function() {
+			
+			var access = document.getElementById("accesscode").value; 
+			
+			$.ajax({
+				url: "http://ec2-54-144-197-87.compute-1.amazonaws.com/appservice/event/"+access,
+				type: "GET",
+				dataType: "text",
+				success: function (data) {					
+					  if(data==0){	 
+					   ons.notification.alert({
+								  message: 'Invalid Login'
+								});
+					  } 
+					  else{
+					 	  var t = JSON.parse(data);		
+						  var id = t['id']; 
+						  var code = t['code']; 
+		                  var name = t['name']; 
+						  var npoID = t['npoID']; 
+						  if(typeof(Storage)!=="undefined")
+						  {
+							  localStorage.setItem("eventid", id);
+							  localStorage.setItem("eventcode", code);
+							  localStorage.setItem("eventname", name);
+							  	var url = 'products.html'; 
+								$(location).attr('href',url);    
+								
+							  
+						  }
+					  }
+				},
+				error: function () {					
+					   ons.notification.alert({
+								  message: 'Invalid Login'
+								});
+				}
+			});
+			
+		 
+		};
         
+    });
+	
+	// Products Controller
+    app.controller('ProductsController', function($scope, Data, $http) {
+
+        var apiurl= "http://ec2-54-144-197-87.compute-1.amazonaws.com/appservice/getEventProducts/";
+        $scope.items = Data.items;
+
+        $scope.showDetail = function(index){
+            var selectedItem = $scope.items[index];
+            Data.selectedItem = selectedItem;
+            $scope.ons.navigator.pushPage(selectedItem.page, {title: selectedItem.title, animation: 'slide'});
+        }
+		
+		var eventid = localStorage.getItem('eventid');
+		$http({method: 'GET', url: apiurl+eventid}).success(function(data){
+				$scope.productlist = data.products;
+		});
+			        
     });
     
     
